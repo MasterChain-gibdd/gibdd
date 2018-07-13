@@ -1,0 +1,143 @@
+
+<head>
+    <title>Единая система учета транспортных средств</title>
+    <meta charset = "utf-8">
+    <link rel = "stylesheet" href = "main.css">
+    </head>
+    <body>
+
+
+        
+    
+            
+    
+        <div id = "main">
+            <div id = "header">
+            <div id = "title">Система учета транспортных средств</div>
+            <ul id = "about">
+                <li><a href = "https://vk.com/public168799766" target="_blank">О нас</a></li>
+                <li><a href = "https://twitter.com/TH88epGL9HduUQi/status/1017366936898953216" target="_blank">Обратная связь</a></li>
+                
+                
+                
+                </ul>
+            </div>
+          
+          
+              
+              <div id = "content">
+                  <img src="http://ru-an.info/Photo/QNews/n46048/1.jpg" width="130" height="100">
+             
+              <h1>Добро пожаловать на сайт!</h1>
+              
+        
+        <h2>Добавить пользователя</h2>
+        {{> userAdder}}
+        <h2>Поиск по базе данных</h2>
+        {{> userSearcher}}
+        <h2>Добавить автомобиль</h2>
+        
+        {{> addCar}}
+        <h2>Просмотр истории автомобиля</h2>
+        {{> searchCarHistory}}
+        <h2>Изменить владельца автомобиля</h2>
+        {{> modifyCarOwner}}
+    
+              
+              
+    
+    
+    
+            </div>
+    
+            <div id = "footer"> © MasterChainDreamTeam. All rights reserved. </div>
+    
+            </div>
+    </body>
+    
+    
+      
+      
+      <template name = "userAdder">
+        <form>
+            <label>Адрес:</label>
+          <input type = "text" name = "bcAddress">
+          <label>Имя:</label>
+          <input type = "text" name = "Name">
+           <input type = "submit" value = "Добавить">
+        </form>
+        {{#each users}}
+        <p><b>Адрес:</b> {{bcAddress}}  <b>Имя</b>: {{name}} </p>
+        {{/each}}
+      </template>
+      
+      <template name = "userSearcher">
+        <form>
+            <label>Адрес:</label>
+            <input type = "text" name = "bcAddress">
+            <label>Имя:</label>
+            <input type = "text" name = "Name">
+           <input type = "submit" value = "Поиск">
+        </form>
+        <p id="p3"></p>
+      </template>
+      
+      <template name = "userIdChanger">
+        <form>
+            <label>Старый:</label>
+          <input type = "text" name = "idFrom">
+          <label>Новый:</label>
+          <input type = "text" name = "idTo">
+          <input type = "submit" value = "Change">
+        </form>
+      </template>
+      
+      <template name = "rightsGiver">
+        <form>
+          <input type = "text" name = "bChainAddress">
+           <input type = "submit" value = "Дать права">
+        </form>
+      </template>
+      
+      <template name = "addCar">
+          <form>
+              <label>Покупатель:</label>
+            <input type = "text" name = "buyerAddress">
+            <label>ПТС:</label>
+            <input type = "text" name = "carVIN">
+            <input type = "submit" value = "Добавить">
+          </form>
+          <h3>Текущие</h3>
+          {{#each cars}}
+        <p><b>ПТС:</b> {{VIN}}  <b>Владелец</b>: {{owner}} <b>Активна</b>: {{active}} </p>
+        {{/each}}
+        </template>
+      
+        <template name = "searchCarHistory">
+            <form>
+              <label>ПТС:</label>
+              <input type = "text" name = "carVIN">
+              <input type = "submit" value = "Просмотреть">
+            </form>
+            <p id="p4"></p>
+          </template>
+      
+        <template name = "modifyCarOwner">
+            <form>
+                <label>ПТС:</label>
+                <input type = "text" name = "carVIN">
+                <label>Старый:</label>
+              <input type = "text" name = "old">
+              <label>Новый:</label>
+              <input type = "text" name = "new">
+              <input type = "submit" value = "Изменить">
+            </form>
+          </template>
+    
+    
+    
+    
+
+
+
+

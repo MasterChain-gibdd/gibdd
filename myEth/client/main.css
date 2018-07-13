@@ -1,0 +1,53 @@
+
+  *{
+    box-sizing: border-box
+  }
+  #main{
+    width: 810px;
+    margin: 0 auto;
+    border: 5px solid black
+  }
+  #header{
+    height: 80px;
+    border-bottom: 5px solid black
+  }
+
+  #content{
+    width: 790px;
+    float: right;
+    height: 890px
+  }
+  #main{
+    background: #b3c1e6
+  }
+  #header, #footer{
+    background: #9091da
+  }
+  #header{
+    background: #9091da url(2.jpg) no-repeat 5% center
+  }
+  #title{
+    font-size: 32px;
+    float: left;
+    margin-left: 10px;
+    font-family: tahoma;
+    color: yellow;
+    padding-top: 20px;
+    text-shadow: 0 0 5px orange;
+  }
+  #about{
+    float: right;
+    list-style: none;
+    margin-right: 10px
+  }
+  #about a{
+    color: yellow;
+  }
+  .menu{
+    list-style-type: disc;
+    padding: 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    display:block;
+  }
+  
